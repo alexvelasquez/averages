@@ -33,7 +33,7 @@ class HomeController extends Controller
      */
     public function productos()
     {
-        return view('productos');
+        return view('products/productos');
     }
 
     /**
@@ -43,6 +43,16 @@ class HomeController extends Controller
      */
     public function cargar()
     {
-        return view('carga');
+        return view('products/carga');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function listado()
+    {
+        return view('products/listado');
     }
 }

@@ -37,7 +37,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="price" class="col-md-4 col-form-label text-md-right">{{ __('precio') }}</label>
+                            <label for="price" class="col-md-4 col-form-label text-md-right">{{ __('Precio') }}</label>
 
                             <div class="col-md-6">
                                 <input id="price" type="number" class="form-control" name="price" step="0.01" required>
@@ -45,7 +45,7 @@
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
+                            <div class="col-md-4 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Agregar') }}
                                 </button>
@@ -54,8 +54,7 @@
                                 <a href="{{url('/productos')}}" class="btn btn-danger">
                                     {{ __('volver') }}
                                 </a>
-                            </div>
-                            
+        </div>
                         </div>
                     </form>
                 </div>

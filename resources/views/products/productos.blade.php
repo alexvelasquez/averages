@@ -17,7 +17,7 @@
       <div class="card-body">
         <h5 class="card-title"><strong>Listado Productos</strong></h5>
         <p class="card-text">Acá podrás ver los productos y modificarlos.</p>
-        <a href="{{url('/productos')}}" class="btn btn-primary">Entrar</a>
+        <a href="{{url('/listado')}}" class="btn btn-primary">Entrar</a>
       </div>
     </div>
   </div>
