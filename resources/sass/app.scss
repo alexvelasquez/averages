@@ -4,16 +4,7 @@
 @import 'variables';
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+@import 'custom';
 body {
     background-color: $board;
-}
-
-.navbar-light .navbar-nav .nav-link {
-    color: #fff;
-    padding: 0 25px;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: .1rem;
-    text-decoration: none;
-    text-transform: uppercase;
 }

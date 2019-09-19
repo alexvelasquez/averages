@@ -1,10 +1,10 @@
-@extends('layouts.app')
+@extends('welcome')
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card" style="margin-top:-80%">
                 <div class="card-header">{{ __('Entrar') }}</div>
 
                 <div class="card-body">

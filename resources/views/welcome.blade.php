@@ -3,23 +3,27 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+            <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>Laravel</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Lobster|Patua+One&display=swap" rel="stylesheet">
+        <title>Averages</title>
+
+      
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="https://kit.fontawesome.com/e2f6bcc9af.js"></script>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
         <!-- Styles -->
         <style>
-            html, body {
-                background-color: #2F4F4F;
-                color: #fff;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+
 
             .full-height {
                 height: 100vh;
@@ -58,7 +62,7 @@
                 text-decoration: none;
                 text-transform: uppercase;
             }
-
+            
             .m-b-md {
                 margin-bottom: 30px;
             }
@@ -82,13 +86,10 @@
                 </div>
             @endif
         </div>
-            <div class="content">
-                <div class="title m-b-md">
-                    <h2 style="font-family: 'Lobster', cursive;">Bienvenido<h2>
-                    <h6 style="font-family: 'Lobster', cursive;">¿Estas listo para sacar promedios?</h6>
-                <div>
-                    
-            </div>
         </div>
+                <div class="m-b-md">
+                    @yield('content')
+                <div>  
+
     </body>
 </html>
