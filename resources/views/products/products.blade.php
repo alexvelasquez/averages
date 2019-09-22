@@ -15,7 +15,7 @@
 <div class="row">
 
 <div class="col-xl-4 col-sm-6 mb-4">
-    <div id="carne" class="card text-white bg-danger o-hidden h-100">
+    <div class="card text-white o-hidden h-100" style="background-color:#8E9AD6">
       <div class="card-body">
         <div class="card-body-icon">
           <i class="fas fa-fw fa-life-ring"></i>
@@ -28,7 +28,7 @@
     </div>
   </div>
   <div class="col-xl-4 col-sm-6 mb-4">
-    <div class="card text-white bg-primary o-hidden h-100">
+    <div class="card text-white o-hidden h-100" style="background-color:#8E9AD6">
       <div class="card-body">
         <div class="card-body-icon">
         <i class="fas fa-fw fa-piggy-bank"></i>
@@ -42,7 +42,7 @@
   </div>
 
   <div class="col-xl-4 col-sm-12 mb-4">
-    <div class="card text-white bg-warning o-hidden h-100">
+    <div class="card text-white o-hidden h-100" style="background-color:#8E9AD6">
       <div class="card-body">
         <div class="card-body-icon">
         <i class="fas fa-fw fa-drumstick-bite"></i>
@@ -76,7 +76,7 @@
       <input type="number" class="form-control" placeholder="Precio ">
     </div>
     <div class="col col-md-2">
-      <input type="submit" class="btn btn-primary" value="Agregar">
+      <button class="btn text-white" style="background-color:#8E9AD6"><i class="fas fa-check"></i></button>
     </div>
   </div>
 </form>
@@ -112,6 +112,7 @@
             <th class="text-center">Nombre</th>
             <th class="text-center">Precio</th>
             <th style="border:0"></th>
+            <th style="border:0"></th>
           </tr>
         </thead>
         <tbody>
@@ -120,18 +121,29 @@
             <td class="text-center">19/09/2019</td>
             <td>         
                 <div class="col col-md-6 offset-3 ">
-                  <input type="text" class="form-control" value="Paleta">
+                  <input type="text" class="form-control text-center text-capitalize" value="Paleta">
                 </div>
             </td>
             <td>
                 <div class="col col-md-6 offset-3">
-                  <input type="number" class="form-control" value="233.34">
+                  <input type="number" class="form-control text-center text-capitalize" value="233.34">
                 </div>
             </td>
             <td style="border:0">
-                <div class="col">
-                  <input type="submit" class="btn btn-success" value="Modificar">
-                </div>
+              <div style="float:left; text-align:right">
+                <ul style="list-style:none">
+                <li  style="display:inline-block; text-align:left">
+                <div class="col-md-6">
+                <button  class="btn btn-success"  disabled><i class="fas fa-edit"></i></button>
+                    </div>
+                </li>
+                 <li style="display:inline-block; text-align:left">
+                 <div class="col-md-6" >
+                        <button  class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                    </div>
+                </li>
+                </ul>
+              <div>
             </td>
           </tr>
           </div>
@@ -140,19 +152,28 @@
           <tr>
             <td class="text-center">19/09/2019</td>
             <td>         
-                <div class="col col-md-6 offset-3 ">
-                  <input type="text" class="form-control" value="Cuadrada">
+                <div class="col-md-6 offset-md-3 ">
+                  <input type="text" class="form-control text-center text-capitalize" value="Cuadrada">
                 </div>
             </td>
             <td>
-                <div class="col col-md-6 offset-3">
-                  <input type="number" class="form-control" value="170.34">
+                <div class="col-md-6 offset-md-3">
+                  <input type="number" class="form-control text-center text-capitalize" value="170.34">
                 </div>
             </td>
             <td style="border:0">
-                <div class="col">
-                  <input type="submit" class="btn btn-success" value="Modificar" hidden>
-                </div>
+            <div style="float:left; text-align:right">
+                <ul style="list-style:none">
+                <li  style="display:inline-block; text-align:left"><div class="col-md-6">
+                <button  class="btn btn-success"  disabled><i class="fas fa-edit"></i></button>
+                    </div>
+                </li>
+                 <li style="display:inline-block; text-align:left"><div class="col-md-6" >
+                        <button  class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                    </div>
+                </li>
+                </ul>
+              <div>
             </td>
           </tr>
           </div>

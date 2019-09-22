@@ -11221,6 +11221,10 @@ body.sidebar-toggled footer.sticky-footer {
     }
 }
 
-#carne {
-    box-shadow: 0 0 20px #DBF0D3;
+.btn-circle {
+    display: block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid red;
 }

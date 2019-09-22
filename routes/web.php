@@ -1,18 +1,20 @@
 <?php
 
 Route::get('/', function () {
-    return view('auth/login');
+    if(empty(Auth::user())){
+        return view('auth/login');
+    }
+    else{
+        return view('products/products');
+    }
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/productos','HomeController@productos')->name('productos');
+Route::get('/products','HomeController@products')->name('products');
 
-Route::get('/cargar','HomeController@cargar')->name('cargar');
-
-
-Route::get('/listado','HomeController@listado')->name('listado');
+Route::get('/statistics','HomeController@statistics')->name('statistics');
 
 

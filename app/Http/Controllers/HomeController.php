@@ -23,7 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('products/productos');
+        return view('products/products');
     }
 
         /**
@@ -31,9 +31,9 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function productos()
+    public function products()
     {
-        return view('products/productos');
+        return view('products/products');
     }
 
     /**
@@ -41,18 +41,8 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function cargar()
+    public function statistics()
     {
-        return view('products/carga');
-    }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
-    public function listado()
-    {
-        return view('products/listado');
+        return view('statistics/statistics');
     }
 }
