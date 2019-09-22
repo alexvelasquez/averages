@@ -97,6 +97,7 @@
             <th class="text-center">Nombre</th>
             <th class="text-center">Precio</th>
             <th class="text-center">Kg</th>
+            <th class="text-center">Total</th>
           </tr>
         </thead>
         <tbody>
@@ -118,6 +119,11 @@
                   <input type="number" class="form-control text-center" value="" required>
                 </div>
             </td>
+            <td>
+                <div class="col col-md-6 offset-3">
+                  <input type="number" class="form-control text-center" value="" required>
+                </div>
+            </td>
           </tr>
           </div>
 
@@ -132,6 +138,11 @@
             <td>
                 <div class="col-md-6 offset-md-3">
                   <input type="number" class="form-control text-center" value="170.34" required>
+                </div>
+            </td>
+            <td>
+                <div class="col col-md-6 offset-3">
+                  <input type="number" class="form-control text-center" value="" required>
                 </div>
             </td>
             <td>
@@ -163,11 +174,11 @@
         <div class="card-body">
           <div class="row">
               <div class="col col-md-4" style="border-right:3px solid;">
-                  <h3 class="text-center" style="background-color:#6B75A0;   border-radius:5px;">Precios Totales</h3>
+                  <h3 class="text-center" style="background-color:#6B75A0;   border-radius:5px;">Media Total</h3>
                   <h2 class="text-center">21.500 $</h2>
               </div>
               <div class="col col-md-4" style="border-right:3px solid;">
-                  <h3 class="text-center" style="background-color:#6B75A0;  border-radius:5px;">Kilos Totales</h3>
+                  <h3 class="text-center" style="background-color:#6B75A0;  border-radius:5px;">Producto Total</h3>
                   <h2 class="text-center">560,400 kg</h2>
               </div>
               <div class="col col-md-4" style="border-right:3px solid;">

@@ -13,7 +13,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/products','HomeController@products')->name('products');
+Route::get('/products','ProductsController@index')->name('products');
+Route::post('/products/carga','ProductsController@carga')->name('carga');
 
 Route::get('/statistics','HomeController@statistics')->name('statistics');
 
