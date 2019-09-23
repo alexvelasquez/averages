@@ -4,6 +4,8 @@
 @import 'variables';
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+@import '~alertifyjs/build/css/alertify';
+@import '~alertifyjs/build/css/themes/default';
 @import 'custom';
 body {
     background-color: $board;

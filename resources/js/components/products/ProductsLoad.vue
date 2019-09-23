@@ -7,7 +7,7 @@
             </div>
             <div class="card-body">
             <form @submit.prevent="saveProduct">
-            <div class="form-row right">
+            <div class="form-row">
                 <div class="col col-md-2 offset-1">
                 <input type="text" class="form-control" value="Seccion/Carne" disabled>
                 </div>
@@ -34,18 +34,51 @@ export default {
         return {
             product:[],
             name:null,
-            price:null
+            price:null,
+            date:null
         }
     },
     methods:{
+
+        /** SAVE PRODUCT */
         saveProduct(){
-            this.product.push({name:this.name, price:this.price});
-            
+            this.date_format();
+            this.createProduct();
             axios
-            .post('products/carga',this.product)
-            .then(response => (
-               console.log(response))
-            )
+            .post('products/carga',this.product[0])
+            .then(response => {
+                if(response.data.code==200){
+                    this.$emit('save',this.product[0])
+                    alertify.success("Agregado!");
+                    this.product=[];
+                }
+            })
+            .catch(e => {
+            // Podemos mostrar los errores en la consola
+                alertify.error("Ha ocurrido un error!")
+            })
+        },
+
+        /** CREATE PRODUCT */
+        createProduct(){
+            this.product.push({name:this.name, price:this.price, date_update:this.date});
+        },
+
+        /** DATE FORMATE (DD/MM/YYYY) */
+        date_format(){
+            let date = new Date();
+
+            let day= date.getDate();
+            let month=date.getMonth()+1;
+            let year=date.getFullYear();
+            if (day.toString().length<2) {
+                day = "0"+day;
+            }
+            if (month.toString().length<2){
+                month = "0"+month;
+            }
+            this.date = year+'/'+month+'/'+day;
+            
         }
     }
     
