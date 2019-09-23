@@ -49,7 +49,12 @@ export default {
             .then(response => {
                 if(response.data.code==200){
                     this.$emit('save',this.product[0])
-                    alertify.success("Agregado!");
+                        swal.fire(
+                            'Agregado!',
+                            'Seguí cargando mas productos!',
+                            'success'
+                        )
+
                     this.product=[];
                 }
             })

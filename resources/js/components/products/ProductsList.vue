@@ -95,31 +95,60 @@ export default {
                 .post('products/edit/'+id,this.product[0])
                 .then(response => {
                     if(response.data.code==200){
-                        alertify.success("Modifcado!");
                         this.product = []
+                        swal.fire({
+                            type:'success',
+                            title:'Modificado'
+                        })
                     }
                 })
                 .catch(e => {
                 // Podemos mostrar los errores en la consola
-                    alertify.error("Ha ocurrido un error!")
+                swal.fire({
+                    type: 'error',
+                    title: 'Oops...',
+                    text: 'Ha ocurrido un problema!',
+                    footer: '<a href>Como solucionarlo?</a>'
+                    })
                 })   
             }
         },
 
         /** DELETE PRODUCT */
         deleteProduct(index,element){
-            axios
-                .get('products/delete/'+element)
-                .then(response => {
-                    if(response.data.code==200){
-                        alertify.success("Eliminado!");
-                        this.products.splice(index,1)
-                    }
-                })
-                .catch(e => {
-                // Podemos mostrar los errores en la consola
-                    alertify.error("Ha ocurrido un error!")
-                })   
+            swal.fire({
+                title: 'Estas seguro?',
+                text: "No podrás revertir esto!",
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Si, eliminarlo!'
+                }).then((result) => {
+                if (result.value) {
+                    axios
+                        .get('products/delete/'+element)
+                        .then(response => {
+                            if(response.data.code==200){
+                                this.products.splice(index,1);
+                                swal.fire(
+                                'Eliminado!',
+                                'El producto se elimino correctamente.',
+                                'success'
+                                )
+                            }
+                        })
+                        .catch(e => {
+                        // Podemos mostrar los errores en la consola
+                            swal.fire({
+                            type: 'error',
+                            title: 'Oops...',
+                            text: 'Ha ocurrido un problema!',
+                            footer: '<a href>Como solucionarlo?</a>'
+                            })
+                    })   
+                }
+            })
 
         },
 

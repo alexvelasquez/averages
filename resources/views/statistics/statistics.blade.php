@@ -72,7 +72,7 @@
     </div>
       <form>
     <div class="form-row right" style="margin-bottom: 20px">
-            <div class="col col-md-4 offset-1">
+            <div class="col col-md-6">
             <input type="text" class="form-control text-center" value="Media Res" disabled>
             </div>
             <div class="col col-md-2 ">
@@ -80,6 +80,9 @@
             </div>
             <div class="col col-md-2">
             <input type="number" class="form-control text-center" placeholder="Kg">
+            </div>
+            <div class="col col-md-2">
+            <input type="number" class="form-control text-center" placeholder="cantidad">
             </div>
     </div>
     </form>
@@ -110,17 +113,17 @@
                 </div>
             </td>
             <td>
-                <div class="col col-md-6 offset-3">
+                <div class="col col-md-8 offset-2">
                   <input type="number" class="form-control text-center" value="233.34" required>
                 </div>
             </td>
             <td>
-                <div class="col col-md-6 offset-3">
+                <div class="col col-md-8 offset-2">
                   <input type="number" class="form-control text-center" value="" required>
                 </div>
             </td>
             <td>
-                <div class="col col-md-6 offset-3">
+                <div class="col col-md-8 offset-2">
                   <input type="number" class="form-control text-center" value="" required>
                 </div>
             </td>
